@@ -4,7 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 #For Excel File
-df = pd.read_excel('C://Users//anprasanth//Downloads//Data_SDG_India_Index_2020-21.xlsx')
+df = pd.read_excel('Data_SDG_India_Index_2020-21.xlsx')
 st.title('World Happiness Index 2021:')
 st.write(df)
 
