@@ -14,13 +14,18 @@ if select =="All":
 else:
     filtered_df = df[df["State/UT"]==select]
     
-col1, col2 = st.columns([1, 1])
-    
-col1.subheader('World Happiness Index 2021:')
-col1.write(filtered_df)
+tab1, tab2 = st.tabs(["Page1", "Page2"])
 
-fig1 = plt.figure()
-ax = sns.countplot(x='SDG 2', data=filtered_df, palette = 'hls')
-col2.subheader('Plot-2')
-col2.pyplot(fig1)
 
+with tab1:
+    col1, col2 = st.columns([1, 1])
+    col1.subheader('World Happiness Index 2021:')
+    col1.write(filtered_df)
+
+    fig1 = plt.figure()
+    ax = sns.countplot(x='SDG 2', data=filtered_df, palette = 'hls')
+    col2.subheader('Plot-2')
+    col2.pyplot(fig1)
+
+with tab2:
+    st.write(df) 
