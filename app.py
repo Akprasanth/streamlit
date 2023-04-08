@@ -8,6 +8,7 @@ df = pd.read_excel('Data_SDG_India_Index_2020-21.xlsx')
 
 ##Filter Sidebars
 state_list = df["State/UT"].to_list()
+state_list = state_list.append("All")
 select = st.sidebar.selectbox('Filter the state/ut here:', state_list, key='1')
 if select =="All":
     filtered_df = df
