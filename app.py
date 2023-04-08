@@ -14,7 +14,7 @@ if select =="All":
 else:
     filtered_df = df[df["State/UT"]==select]
     
-col1, col2 = st.columns([2, 1])
+col1, col2 = st.columns([1, 1])
     
 col1.subheader('World Happiness Index 2021:')
 col1.write(filtered_df)
