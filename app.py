@@ -17,19 +17,16 @@ else:
 tab1, tab2 = st.tabs(["Page1", "Page2"])
 
 with tab1:
-    container1, container2 = st.container()
-    with container1:
-        col1, col2 = st.columns([1, 1])
-        col1.subheader('World Happiness Index 2021:')
-        col1.write(filtered_df)
+    col1, col2 = st.columns([1, 1])
+    col1.subheader('World Happiness Index 2021:')
+    col1.write(filtered_df)
 
-        fig1 = plt.figure()
-        ax = sns.countplot(x='SDG 2', data=filtered_df, palette = 'hls')
-        col2.subheader('Plot-2')
-        col2.pyplot(fig1)
-    
-   with container2:
-        st.write(df)
+    fig1 = plt.figure()
+    ax = sns.countplot(x='SDG 2', data=filtered_df, palette = 'hls')
+    col2.subheader('Plot-2')
+    col2.pyplot(fig1)
+
+    st.write(df)
 
 with tab2:
     st.write(df) 
