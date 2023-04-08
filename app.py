@@ -21,5 +21,6 @@ col1.write(filtered_df)
 
 fig1 = plt.figure()
 ax = sns.countplot(x='SDG 2', data=filtered_df, palette = 'hls')
+col2.subheader('Plot-2')
 col2.pyplot(fig1)
 
