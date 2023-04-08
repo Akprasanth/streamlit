@@ -17,7 +17,7 @@ else:
 tab1, tab2 = st.tabs(["Page1", "Page2"])
 
 with tab1:
-    container1, container2 = st.container()'
+    container1, container2 = st.container()
     with container1:
         col1, col2 = st.columns([1, 1])
         col1.subheader('World Happiness Index 2021:')
