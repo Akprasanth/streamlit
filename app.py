@@ -8,12 +8,12 @@ df = pd.read_excel('Data_SDG_India_Index_2020-21.xlsx')
 
 #Second Excel file
 df2 = pd.read_excel('Test_file.xlsx')
-countries = tuple(df.COUNTRY.to_list())
+countries = tuple(df2.COUNTRY.to_list())
 cat_counts = {
-    'CAT1': df.CAT1.to_numpy(),
-    'CAT2': df.CAT2.to_numpy(),
-    'CAT3': df.CAT3.to_numpy(),
-    'CAT4': df.CAT4.to_numpy(),
+    'CAT1': df2.CAT1.to_numpy(),
+    'CAT2': df2.CAT2.to_numpy(),
+    'CAT3': df2.CAT3.to_numpy(),
+    'CAT4': df2.CAT4.to_numpy(),
 }
 
 ##Filter Sidebars
