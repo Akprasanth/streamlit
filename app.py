@@ -4,7 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-from st_card import st_card
+import st_card
 
 #For Excel File
 df = pd.read_excel('Data_SDG_India_Index_2020-21.xlsx')
