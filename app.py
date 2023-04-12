@@ -31,7 +31,6 @@ tab1, tab2 = st.tabs(["Page1", "Page2"])
 
 with tab1:
     col1, col2 = st.columns([1, 1])
-    col1.st_card('Completed Orders', value=76.4)
     col1.subheader('World Happiness Index 2021:')
     col1.write(filtered_df)
 
