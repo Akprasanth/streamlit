@@ -56,12 +56,12 @@ with tab2:
     theme_good = {'bgcolor': '#EFF8F7','title_color': 'green','content_color': 'green','icon_color': 'green', 'icon': 'fa fa-check-circle'}
     with cc[0]:
      # can just use 'good', 'bad', 'neutral' sentiment to auto color the card
-     hc.info_card(title='Some heading GOOD', content='All good!', sentiment='good',bar_value=77)
+     hc.info_card(title='Some heading GOOD', content='All good!', sentiment='good',bar_value=20)
 
     with cc[1]:
      hc.info_card(title='Some BAD BAD', content='This is really bad',bar_value=12,theme_override=theme_bad)
 
     with cc[2]:
-     hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=55)
+     hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=20)
 
     st.write(df)
