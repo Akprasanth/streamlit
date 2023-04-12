@@ -4,7 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-import st_card
+import hydralit_components as hc
 
 #For Excel File
 df = pd.read_excel('Data_SDG_India_Index_2020-21.xlsx')
@@ -50,4 +50,18 @@ with tab1:
     st.write(df)
 
 with tab2:
-    st.write(df) 
+    cc = st.columns(4)
+    #can apply customisation to almost all the properties of the card, including the progress bar
+    theme_bad = {'bgcolor': '#FFF0F0','title_color': 'red','content_color': 'red','icon_color': 'red', 'icon': 'fa fa-times-circle'}
+    theme_neutral = {'bgcolor': '#f9f9f9','title_color': 'orange','content_color': 'orange','icon_color': 'orange', 'icon': 'fa fa-question-circle'}
+    theme_good = {'bgcolor': '#EFF8F7','title_color': 'green','content_color': 'green','icon_color': 'green', 'icon': 'fa fa-check-circle'}
+    with cc[0]:
+     # can just use 'good', 'bad', 'neutral' sentiment to auto color the card
+     hc.info_card(title='Some heading GOOD', content='All good!', sentiment='good',bar_value=77)
+
+    with cc[1]:
+     hc.info_card(title='Some BAD BAD', content='This is really bad',bar_value=12,theme_override=theme_bad)
+
+    with cc[2]:
+     hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=55)
+
