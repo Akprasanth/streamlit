@@ -64,3 +64,4 @@ with tab2:
     with cc[2]:
      hc.info_card(title='Some NEURAL', content='Oh yeah, sure.', sentiment='neutral',bar_value=55)
 
+    st.write(df)
